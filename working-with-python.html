@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Cloud Computing - Working with Python</title>
+        <meta content="Class website for the Cloud Computing course in the UChicago Masters Program in Computer Science" name="description">
+        <meta content="uchicago, mpcs, cloud computing" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2d35b6939d.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet"href="assets/vendor/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet"href="assets/vendor/swiper/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <!-- Uncomment below if you prefer to use text as a logo -->
+                <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="/">Class Home</a></li>
+                        <li><a class="nav-link scrollto" href="assignments-grading">Assignments</a></li>
+                        <li><a class="nav-link scrollto" href="asking-questions">Asking Questions</a></li>
+                        <li><a class="nav-link scrollto active" href="working-with-python">Working with Python</a></li>
+                        <li><a class="nav-link scrollto" href="remote-editing">Remote Editing</a></li>
+                        <li><a class="nav-link scrollto" href="https://home.uchicago.edu/vas">My UChicago Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </header><!-- End Header -->
+
+        <main id="main">
+
+            <!-- ======= Content Section ======= -->
+            <section id="content">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="page-head">
+                            <h2>Working with Python in MPCS 51083</h2>
+                        </div>
+                    </div>
+
+                    <p>In this class we will work in Python for all homework assignments. While it is not required, I recommend that you use one of the many available Python tools (such as <a href="https://docs.astral.sh/uv/" target="_blank">uv <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>, <a href="https://pipenv.pypa.io/en/latest/" target="_blank">pipenv <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> or <a href="https://virtualenv.pypa.io/en/latest/" target="_blank">virtualenv <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> and <a href="https://pypi.org/project/virtualenvwrapper/" target="_blank">virtualenvwrapper <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>) to set up Python virtual environments. We’ll be experimenting a lot and the isolation provided by virtual environments helps minimize configuration conflicts/issues. In order to be most productive, please take some time before the class starts to set up a working Python environment on your laptop. Coursework must be completed using Python 3.12 or later.</p>
+
+                    <p><i>Note: If you use Anaconda as your Python development environment, I strongly suggest you set it aside for this class and use Python directly.</i></p>
+
+                    <p>Below is a walkthrough of installing and using Python virtual environments on macOS (10.15 or later). If you’re not using macOS, please check out the Hitchhiker’s guide for <a href="https://docs.python-guide.org/starting/install3/win/" target="_blank">Windows <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> or <a href="http://docs.python-guide.org/en/latest/starting/install3/linux/" target="_blank">Linux <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>. Please note that none of these are definitive guides&mdash;or even required. As long as you have working Python environment, it doesn't matter how you got to it :-)</p>
+
+                    <h4>Using Python on Amazon EC2 instances</h4>
+
+                    <p>You can choose to work on assignments on Amazon EC2 virtual machine instances instead of on your local machine (this will increasingly be a requirement later in the quarter). All our instances have pre-configured Python environments that can be activated by running: <code>workon mpcs</code>.
+
+                    <h4>macOS Setup using virtualenv</h4>
+
+                    <p>IMPORTANT NOTE: The process below should work in most scenarios, but there is a good chance that you’ll run into issues if your current macOS configuration is different from the default. If that happens, please try to resolve it by consulting online resources before asking on Ed; it’s very difficult to troubleshoot these issues without poking around on your machine :-), so we will likely ask you to visit us during office hours ...and even then we may not be able to get things working without a lot of effort, leaving you with less time to work on your assignments.</p>
+
+                    <p>We first install the pip package manager and then use that to install other required packages. I use homebrew to bootstrap the process. If you don’t already have it, install homebrew thus:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Then check that we’re ready to brew: <code>brew doctor && brew update</code>.
+
+                    <p>I prefer to override Apple’s default python and install a fresh copy: <code>brew install python3</code>.
+
+                    <p>Depending on your operating system version, running python on the macOS command line may, by default, start an older version of Python. You can ensure you’re running your recently installed Python3 and associated pip3, by forcing the system path to look for python in its new home.</p>
+
+                    <p>Add the following to your <code>~/.zshrc</code> and source it (or open a new shell):
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+export PATH=/opt/homebrew/bin:/opt/homebrew/sbin:$PATH
+alias python="python3"  # optional, if python doesn't resolve to python3
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Note: If you happen to be running an older version of macOS on Intel silicon, homebrew is installed on a different path so add this line instead: <code>export PATH=/usr/local/opt/python/libexec/bin:$PATH</code>.
+
+                    <p>Now when you run python or pip you will be using the latest version by default. The brew command above also conveniently installed pip, so now we can install virtualenv and virtualenvwrapper thus:<br />
+                        <div class="card bg-light">
+                            <div class="card bg-light">
+                                <div class="code-text">
+                                    <code><pre>
+pip install --upgrade pip
+pip install --upgrade virtualenv
+pip install --upgrade virtualenvwrapper
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+                                    </pre></code>
+                                </div>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Note: The <code>WORKON_HOME</code> environment variable tells virtualenvwrapper to store your environments in <code>~/.virtualenvs/</code> (this is also the case on our EC2 instances); feel free to change this location as you see fit.</p>
+
+                    <p>Test that everything is ready. Source a new shell and create a virtualenv called ‘test’:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+$ mkvirtualenv test
+created virtual environment CPython3.9.12.final.0-64 in 216ms
+creator CPython3Posix(dest=/Users/...
+...
+(test) $ _
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Once the virtualenv is created it will be automatically activated, and your shell prompt will show the name of the virtualenv in parentheses. Now, install the Python requests package as a test: <code>pip install --upgrade requests</code>.</p>
+
+                    <p>Check the packages installed in the current virtualenv; You should see the requests package listed:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+(test) $ lssitepackages
+__pycache__                        pip-22.2.2.virtualenv
+_distutils_hack                    pkg_resources
+_virtualenv.pth                    requests
+_virtualenv.py                     requests-2.28.1.dist-info
+...
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Start an interactive python shell and check that you can import the requests package:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+(test) $ python
+Python 3.13.12 (main, Feb  4 2025, 14:51:09)
+...
+>>> import requests
+>>> 
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>If all that works, you should be good to go. You can now deactivate and remove the test virtualenv thus:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+(test) $ deactivate
+rmvirtualenv test
+Removing test...
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Note: If you have multiple virtualenvs, you can activate the desired virtualenv using the <code>workon</code> command, e.g. <code>workon mpcs</code> would activate the “mpcs” virtualenv.</p>
+
+                    <p>To ensure new shells have the right environment add these commands to ~/.zshrc:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+export WORKON_HOME=~/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/opt/homebrew/bin/python3
+source /opt/homebrew/bin/virtualenvwrapper.sh
+
+# or, for older macOS versions:
+#export WORKON_HOME=~/.virtualenvs
+#source /usr/local/bin/virtualenvwrapper.sh
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <h4>Kickin’ it up a notch!</h4>
+
+                    <p>Using the direnv package, you can configure your system to automatically activate the appropriate virtualenv when you cd into a directory, and deactivate it when you leave that directory. First, install the package: <code>brew install direnv</code>.</p>
+
+                    <p>Then add the following to ~/.zshrc:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+setopt PROMPT_SUBST
+show_virtual_env() {
+    if [[ -n "$VIRTUAL_ENV" && -n "$DIRENV_DIR" ]]; then
+        echo "($(basename $VIRTUAL_ENV)) "
+    fi
+}
+PS1='$(show_virtual_env)'$PS1
+eval "$(direnv hook zsh)"
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Create a file called .envrc in your source code directory, and add:<br />
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+source &lt;path_to_env&gt;/bin/activate
+unset PS1
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>Finally, in your source code directory run: <code>direnv allow</code>. Now, when you cd into the directory with the .envrc file, it will automatically activate the virtualenv. Of course, you can also still activate a virtualenv manually from anywhere in the filesystem by running <code>workon &lt;virtualenv_name&gt;</code>, for example: <code>workon mpcs #activate the mpcs virtual environment</code>.</p>
+
+                    <p>Note: All of the above commands assume you’re using zsh, which is the default shell under Mac OS 10.15 (Catalina) and later. If you’re on a Mac OS version earlier than 10.15, the default shell is likely bash. The commands should work exactly the same way within a bash shell, but direnv will require a slightly different configuration. BUT, you really should upgrade to a more recent version since 10.14 is now past end-of-life, and hence potentially vulnerable.</p>
+
+                    <h4>Stylin’ with Python</h4>
+
+                    <p>If you’re new to Python, please spend a little time looking at the <a href="https://www.python.org/dev/peps/pep-0008/">generally accepted best practice</a> when it comes to coding style.</p>
+
+                    We may penalize you for sloppy code, and sloppy code will make us less inclined to give you an “O” …reading other people’s clean code is hard enough ;-) If you learn one Python thing, and one Python thing only from this class, let it be this: <b>Use spaces instead of hard tabs in your code</b>.</p>
+
+                    <p>You’re welcome! Seriously though, even if your homework code is correct you will be penalized for using tabs (or, even worse, mixing tabs and spaces) in your code. Most decent text editors have an option to convert tabs to spaces&mdash;set that option! And please indent by only 4 spaces. Yes, this may be nitpicking but clean source files are a very important aspect of professional software development so get used to that now. Again, failure to follow these simple requirements will result in an unsatisfactory grade. Don’t be a victim of styling laziness!</p>
+
+                    <p>And one more thing... beware of copy-pasting weirdness. Many of the issues you encounter will be the result of copying and pasting code/commands from one of our Google documents or a PDF file. Some document formats embed a lot of hidden characters for formatting and often transform punctuation into non-standard characters, e.g., &#8220;smart &#8221; quotes like these! If you see weird errors and are sure that your code/command is correct, check again by typing it manually instead of copy-pasting.</p>
+
+                    <h4>Virtual Environment Setup for Anaconda Users (NOT recommended)</h4>
+
+                    <p>For Anaconda users, this is a set of instructions created by a past student. It may be helpful if you decide you want to stick with conda instead of plain ol’ Python. Instead of using virtualenv, you can use the virtual environment manager that ships with conda.<br />
+
+                        <div class="card bg-light">
+                            <div class="code-text">
+                                <code><pre>
+conda update -n base conda  # updates the base version of conda
+sudo conda update --all  # updates all packages (can take a while) 
+                                </pre></code>
+                            </div>
+                        </div>
+                    </p>
+
+                    <p>To create a new environment: <code>conda update --name mpcs</code>.</p>
+
+                    <p>To activate the environment: <code>source activate mpcs</code>.</p>
+
+                    <p>To deactivate the environment: <code>source deactivate</code>.</p>
+
+                    <p>To install specific packages in that environment: <code>conda install --name mpcs <&lt;package_name&gt;</code>.</p>
+
+                    <p>Note the use of <code>conda</code> (instead of <code>pip</code> above) to install the required package. Where possible, if you are using anaconda, stick to using conda as your package manager. However, there are some packages that can only be installed via pip. In order to run pip inside the conda-created environment run the following: <code>conda install -n mpcs pip # once inside the env, use pip normally</code></p>
+
+                    <p>Remember to upgrade pip once inside your environment with: <code>pip install --upgrade pip</code>.</p>
+
+                    <p>To list the packages in a particular environment (use when outside environment): <code>conda list -n mpcs</code>.</p>
+
+                    <p>To see packages installed in an environment, when inside that environment: <code>conda list</code>.</p>
+
+                    <p>To install a package using conda-forge in an environment: <code>sudo conda install --name mpcs -c conda-forge &lt;package_name&gt;</code>. Note the use of <code>sudo</code>. Sometimes, when installing packages, either locally or in an environment from conda or conda-forge, you will get permission denied errors; you can use sudo to overcome this, but it is not recommended.</p>
+
+                    <p>To view all environments on your system: <code>conda info --envs</code> or <code>conda env list</code>.</p>
+
+                    <p>To remove an environment and all associated packages inside that environment: <code>conda remove --name mpcs --all</code>.</p>
+
+                    <p>To install Boto3 (when outside your environment): <code>conda install -name mpcs boto3</code>.</p>
+
+                </div>
+            </section>
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="info">
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>vas[at]uchicago.edu</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </section><!-- End Contact Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="container py-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>

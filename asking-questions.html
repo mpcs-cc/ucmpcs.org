@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Cloud Computing - Asking Questions</title>
+        <meta content="Class website for the Cloud Computing course in the UChicago Masters Program in Computer Science" name="description">
+        <meta content="uchicago, mpcs, cloud computing" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2d35b6939d.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet"href="assets/vendor/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet"href="assets/vendor/swiper/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <!-- Uncomment below if you prefer to use text as a logo -->
+                <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="/">Class Home</a></li>
+                        <li><a class="nav-link scrollto" href="assignments-grading">Assignments</a></li>
+                        <li><a class="nav-link scrollto active" href="asking-questions">Asking Questions</a></li>
+                        <li><a class="nav-link scrollto" href="working-with-python">Working with Python</a></li>
+                        <li><a class="nav-link scrollto" href="remote-editing">Remote Editing</a></li>
+                        <li><a class="nav-link scrollto" href="https://home.uchicago.edu/vas">My UChicago Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </header><!-- End Header -->
+
+        <main id="main">
+
+            <!-- ======= Cloud Computing Section ======= -->
+            <section id="cloud">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="page-head">
+                            <h2>Asking Questions</h2>
+                        </div>
+                    </div>
+
+                    <p>As you work through homework assignments, you will certainly have questions or encounter issues that you are not sure how to deal with. Ed Discussion provides a convenient mechanism to ask questions, but it can sometimes be challenging for us (instructor, TAs and fellow students) to provide assistance if you do not provide the right information when asking a question. Here are a few suggestions that may help you ask questions more effectively on Ed Discussion.</p>
+                    
+                    <p><i>Before you post a question...</i></p>
+
+                    <p><b>Search Ed and check</b>&mdash;It may already be answered in a previous post. Use Ed Discussion's search functionality to see if it brings up any relevant posts. It's possible that another student encountered the same issue and that an instructor/TA already answered it.</p>
+
+                    <p>Beyond Ed, we also expect you to (extensively) search the Internet for answers to questions that are not specific to class assignments. For example, questions related to boto3 usage, Linux commands and working with AWS resources will usually turn up pretty good answers, especially if you search for the "right" thing ← this is actually a skill that can set you apart from others; start honing it now!</p>
+
+                    <p><b>Ask an actual question</b>&mdash;You need to tell us about a specific issue you're encountering, and why you're stuck on it (e.g., you are not getting the expected result, you're seeing an error that you can't decipher, etc.). Writing a post that says "I can't get my server to run, I've pushed my code. Please look at it.” is not a question. We're happy to help you work through any issue and may suggest that you come to office hours so we can dig into it in more detail but, on Ed Discussion, you have to make sure you're asking a specific question.</p>
+
+                    <p><b>Ask public questions</b>&mdash;In general, all questions about coursework, course logistics, etc. should be asked publicly. This way, everyone can benefit from the answer to the question and, if someone runs into the same issue you do, we can refer them to the answer we provided in your post.</p>
+
+                    <p>Ed Discussion has a mechanism that allows you to ask a private question, which will be seen only by the instructors and teaching assistants. This mechanism should be used only for truly private matters that relate uniquely to you (e.g., you need to notify us of a family/medical emergency, you have a concern about your grade, etc.), or if sharing code (see note below about sharing code in posts).</p>
+
+                    <h3>What to do when asking a question</h3>
+
+                    <p><b>Check your environment</b>&mdash;Make sure you're running your code in the "mpcs" virtual environment on the right instance, and that your instance is properly configured, e.g., uses the mpcs security group and your instance profile.</p>
+
+                    <p><b>Give us complete information</b>&mdash;The more information we have about what you did and how it failed, the better. We know that, in some classes, you may feel the need to be brief and concise when asking for help to "avoid wasting the professor's time” or because "professors don't have time to read long posts”. The absolute opposite is true in this class: when asking for help, we prefer that you overwhelm us with information.</p>
+
+                    <p>In particular, it will be much easier for us to help you if we are able to reproduce the exact issue you are encountering (i.e., when we run your code, we must be able to observe the exact same issue you're encountering). And to do so, we need as much information as possible from you:</p>
+
+                    <ul>
+                        <li>If your question relates to your code, make sure you push your code to GitHub before asking for help, and include a permalink to the code line(s) in your post.</li>
+                        <li>Include a detailed description of the exact chain of events that lead to the issue you're encountering (Are you testing a specific function? If so, with what inputs? Does the issue come up only under certain conditions, etc.).</li>
+                        <li>If you encounter an error message (or any other unexpected output) when running a command or your code, please make sure you include the full and unabridged error message (or unexpected output). Summarizing the message (e.g., "I got a permission denied error, but I'm sure I'm accessing the right bucket.”) makes it harder for us to figure out what the issue is.</li>
+                        <li>If something is "wrong”, please describe in what way it seems wrong to you. For example, were you expecting a particular output but got a different one? Is a piece of code behaving in a way you were not expecting? etc. It can be useful to tell us what you were expecting the code to do, and what you encountered instead.</li>
+                    </ul>
+
+                    <h3>What <i>not</i> to do when asking a question</h3>
+
+                    <p><b>Never share your code on public Ed Discussion posts</b>&mdash;As noted in our Academic Honesty policies, you should never share your code with other students, which means you should never post it publicly on Ed Discussion. If you need us to look at your code, use a private post or just push it to GitHub and we will look at it there.</p>
+
+                    <p><b>Avoid screenshots</b>&mdash;Do not post screenshots of your code's output. Screenshots are not searchable, and may pose readability issues for some people. Instructors/TAs may also want to copy-paste that output somewhere else, which is not possible if you post a screenshot.</p>
+
+                    <p>If you need to share some output with us, copy-paste from the terminal into Ed Discussion, and use Ed's "code block” formatting. To copy something on the terminal, just select it (the same way you would do in a word processor: click, and then drag until the end of the output) and press <code>Control-Shift-C</code>.</p>
+
+                    <p>Exception to the above: If you encounter errors in the AWS console or when accessing your web server via a browser, please do include a screenshot and ensure that it captures your entire browser window, especially the URL and the navigation menu, as those contain important information.</p>
+
+                    <p><b>Limit the post to one question</b>&mdash;It's ok to ask multiple questions in one post if they all relate to the same issue, but please avoid posts that have multiple unrelated questions. Instead, write a separate post for each question.
+
+                    <p><b>Don't "Answer” if you intend to "Comment”</b>&mdash;If you need to provide additional information on a question, or have a follow-up question, make sure to always use a "comment” (by clicking on "Comment” below your question). Only fill out the "answer” field if you have resolved the issue on your own, or if you are providing an actual answer to someone else's question.</p>
+
+                </div>
+            </section>
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="container py-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>

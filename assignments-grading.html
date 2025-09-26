@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Cloud Computing - Assignments and Grading</title>
+        <meta content="Class website for the Cloud Computing course in the UChicago Masters Program in Computer Science" name="description">
+        <meta content="uchicago, mpcs, cloud computing" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2d35b6939d.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet"href="assets/vendor/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet"href="assets/vendor/swiper/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <!-- Uncomment below if you prefer to use text as a logo -->
+                <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="/">Class Home</a></li>
+                        <li><a class="nav-link scrollto active" href="assignments-grading">Assignments</a></li>
+                        <li><a class="nav-link scrollto" href="asking-questions">Asking Questions</a></li>
+                        <li><a class="nav-link scrollto" href="working-with-python">Working with Python</a></li>
+                        <li><a class="nav-link scrollto" href="remote-editing">Remote Editing</a></li>
+                        <li><a class="nav-link scrollto" href="https://home.uchicago.edu/vas">My UChicago Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </header><!-- End Header -->
+
+        <main id="main">
+
+            <!-- ======= Cloud Computing Section ======= -->
+            <section id="cloud">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="page-head">
+                            <h2>Assignments and Grading in MPCS 51083 - Autumn 2025</h2>
+                        </div>
+                    </div>
+
+                    <div class="card text-dark bg-warning">
+                        <h4 class="card-header">Let's get the nasty stuff out of the way...</h4>
+                        <div class="card-body">
+                            <p class="card-text">PLEASE READ THIS PAGE IN ITS ENTIRETY. It lists important deadlines and describes the grading scheme used in this class, as well as policies for things like submitting assignments, grade reporting, and assignment re-submission. You are expected to understand everything on this page in order to avoid any misunderstandings about expectations in this class. If you have questions or need clarification, please post on Ed Discussion right away; "I didn't see/realize/understand X or Y or Z..." will not be accepted as an excuse for missing deadlines or unsatisfactory work.</p>
+                        </div>
+                    </div>
+                    <br />
+
+                    <ul class="list-unstyled">
+                        <li><a href="#specs-grading">Specifications Grading</a></li>
+                        <li><a href="#assignments">Assignments</a></li>
+                        <li><a href="#submissions">Submitting Assignments</a></li>
+                        <li><a href="#resubmissions">Resubmissions and Late Submissions</a></li>
+                        <li><a href="#github">Using GitHub</a></li>
+                        <li><a href="#branches">Working with Git Branches</a></li>
+                        <li><a href="#reporting">Grade Reporting</a></li>
+                        <li><a href="#ext-sources">Using External Sources</a></li>
+                    </ul>
+
+                    <h4 id="specs-grading">Specifications Grading</h4>
+
+                    <p>We use specifications grading in this course in an effort to motivate you to engage at whatever level you decide. Whether a “C+” is fine or you feel you must get an “A”, either is perfectly acceptable from my perspective, and the grading scheme describes precisely what is required to get that grade—no more, no less. Here’s how it works:</p>
+
+                    <ol>
+                        <li>You select which assignments to submit. A certain minimum set is required; how many additional assignments you complete beyond that minimum is up to you.</li>
+                        <li>Completed assignments are graded using the Satisfactory/Needs Improvement/Unsatisfactory (or SNU) scale.</li>
+                        <li>Your final grade is determined by a "bundle", based on the number of Satisfactory assignments completed and your performance on quizzes as defined in the table below.</li><br /><br />
+                            <table class="table table-bordered">
+                                <thead>
+                                    <th scope="col" class="col-2">"A" Bundle</th>
+                                    <th scope="col" class="col-2">"A&ndash;" Bundle</th>
+                                    <th scope="col" class="col-2">"B+" Bundle</th>
+                                    <th scope="col" class="col-2">"B" Bundle</th>
+                                    <th scope="col" class="col-2">"B&ndash;" Bundle</th>
+                                    <th scope="col" class="col-2">"C+" or "P/F" Bundle</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Complete all assignments from <b>Group 1</b> at "Satisfactory"</td>
+                                        <td>Complete all assignments from <b>Group 1</b> at "Satisfactory"</td>
+                                        <td>Complete all assignments from <b>Group 1</b> at "Satisfactory"</td>
+                                        <td>Complete at least 9 (nine) assignments from <b>Group 1</b> at "Satisfactory"</td>
+                                        <td>Complete at least 8 (eight) assignments from <b>Group 1</b> at "Satisfactory" and at 2 (two) at "Needs Improvement"</td>
+                                        <td>Complete at least 8 (eight) assignments from <b>Group 1</b> at "Satisfactory" and at least 1 (one) at "Needs Improvement"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Complete at least 2 (two) assignments from <b>Group 2</b> at "Satisfactory"</td>
+                                        <td>Complete at least 2 (two) assignments from <b>Group 2</b> at "Satisfactory"</td>
+                                        <td>Complete at least 1 (one) assignment from <b>Group 2</b> at "Satisfactory"</td>
+                                        <td>Complete at least 1 (one) assignment from <b>Group 2</b> at "Satisfactory"</td>
+                                        <td>Complete at least 1 (one) assignment from either <b>Group 2</b> <i>or</i> <b>Group 3</b> at "Satisfactory"</td>
+                                        <td>Score 50% or higher on at least 1 (one) <b>quiz</b> <i>or</i> the <b>challenge test</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Complete all assignments from <b>Group 3</b> at "Satisfactory"</td>
+                                        <td>Complete all assignments from <b>Group 3</b> at "Satisfactory"</td>
+                                        <td>Complete all assignments from <b>Group 3</b> at "Satisfactory"</td>
+                                        <td>Complete assignment A16 from <b>Group 3</b> at "Satisfactory"</td>
+                                        <td>Score 50% or higher on at least 1 (one) <b>quiz</b> <i>or</i> the <b>challenge test</b></td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Complete at least 2 (two) assignments from <b>Group 4</b> at "Satisfactory"</td>
+                                        <td>Complete at least 1 (one) assignment from <b>Group 4</b> at "Satisfactory"</td>
+                                        <td>Score 50% or higher on at least 2 (two) <b>quizzes</b> <i>or</i> 1 (one) <b>quiz</b> plus the <b>challenge test</b></td>
+                                        <td>Score 50% or higher on at least 2 (two) <b>quizzes</b> <i>or</i> 1 (one) <b>quiz</b> plus the <b>challenge test</b></td>
+                                        <td colspan="2">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Score 50% or higher on all <b>quizzes</b></td>
+                                        <td>Score 50% or higher on all <b>quizzes</b> <i>or</i> 2 (two) <b>quizzes</b> plus the <b>challenge test</b></td>
+                                        <td colspan="4">&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Score 50% or higher on the <b>challenge test</b></td>
+                                        <td colspan="5">&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </li>
+
+                        <p>The SNU scale is defined as follows:</p>
+
+                        <section class="services section-bg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="icon-box">
+                                            <div class="icon"><i class="bi bi-folder-check" style="color:#7fbf90;"></i></div>
+                                                <h4 class="title">Satisfactory (S)</h4>
+                                                <div class="description">
+                                                    Work is complete and demonstrates adequate understanding of the material.</p>
+                                                    <ul>
+                                                        <li>Code works as specified</li>
+                                                        <li>Code contains no/very few minor errors</li>
+                                                        <li>Code implements some error handling</li>
+                                                        <li>Specific references provided</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </a>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                  <div class="icon-box">
+                                    <div class="icon"><i class="fa-duotone fa-solid fa-pen-nib" style="color: #e9bf06;"></i></div>
+                                    <h4 class="title">Needs Improvement (N)</h4>
+                                    <div class="description">
+                                      Work is mostly complete and/or demonstrates some understanding of the material, but is missing one or more critical elements.</p>
+                                      <ul>
+                                        <li>Code works partially as specified</li>
+                                        <li>Code contains some errors</li>
+                                        <li>Code implements no error handling</li>
+                                        <li>Only general references provided</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6" data-wow-delay="0.1s">
+                                  <div class="icon-box">
+                                    <div class="icon"><i class="fa-duotone fa-solid fa-circle-xmark" style="color:#e4583a;"></i></div>
+                                    <h4 class="title">Unsatisfactory (U)</h4>
+                                    <div class="description">
+                                      Work is incomplete and/or demonstrates limited/no grasp of the material.</p>
+                                      <ul>
+                                        <li>Code does not work as specified</li>
+                                        <li>Code contains significant errors</li>
+                                        <li>No references provided</li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                        </section>
+                </ol>
+
+                <div class="card text-white bg-secondary">
+                  <h4 class="card-header">IMPORTANT NOTE</h4>
+                  <div class="card-body">
+                    <p class="card-text">If you are eligible&mdash;and elect&mdash;to take this class as Pass/Fail, you will need to meet the criteria for a “C+” as shown above in order to get a “Pass”, independent of the minimum passing grade for your program (MBA, CAPP, etc.).</p>
+                  </div>
+                </div>
+                <br />
+
+                <h4 id="assignments">Assignments</h4>
+
+                <p>Assignments are submitted via GitHub <a href="#submissions">as described below</a>. You also have the option to re-submit some unsatisfactory work; see <a href="#resubmissions">Resubmissions and Late Resubmissions</a> below.</p>
+
+                <p><i>A note on the workload in this class</i>: Over the years, students have reported the amount of time they spent on each assignment; the average range of hours spent is shown in parentheses next to the assignment name. Your experience may be very different, but I want you to have some indication of what to expect going into this class so that you're not surprised later in the quarter (when it will likely be too late to make changes to your schedule). Pay particular attention to these numbers if you're taking multiple classes that have final projects due in the last couple of weeks of the quarter: the workload in this class also becomes <i>much</i> heavier during that time, and some students have found it difficult to cope. We cannot help you if you take on more than you can handle, so please be advised now.</p>
+
+                <table class="table">
+                  <thead>
+                    <th scope="col"><h5>Group</h5></th>
+                    <th scope="col"><h5>Assignment</h5></th>
+                    <th scope="col"><h5>Due Date*</h5></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Setup</td>
+                      <td>A1: AWS Environment Setup (~1hr)</td>
+                      <td>Sun. 1/12/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td rowspan="10">Group 1</td>
+                      <td>A2: The AWS Command Line Interface (1-2hrs)</td>
+                      <td>Thu. 1/16/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A3: Working with AWS APIs (2-4hrs)</td>
+                      <td>Thu. 1/16/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A4: Building the Annotator API (4-8hrs)</td>
+                      <td>Thu. 1/23/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A6: Uploading Data to Object Storage (4-6hrs)</td>
+                      <td>Wed. 1/29/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A7: Application Decoupling - Front/Back-End Separation (4-6hrs)</td>
+                      <td>Sat. 2/1/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A8: Persisting Data in a KVS (4-8hrs)</td>
+                      <td>Thu. 2/6/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A9: Application Decoupling Using Message Queues (6-10hrs)</td>
+                      <td>Thu. 2/13/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A10: GAS Framework Migration (2-4hrs)</td>
+                      <td>Sat. 2/22/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A11: Enhancing the User Interface (8-10hrs</td>
+                      <td>Sat. 2/22/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #2e4c5c;">
+                      <td>A14: Data Archival (8-20hrs)</td>
+                      <td>Sat. 3/1/2025</td>
+                    </tr>
+                    
+                    <tr style="color: #f9f9f9; background: #4b698b;">
+                      <td rowspan="3">Group 2</td>
+                      <td>A5: Performance Profiling (4-6hrs)</td>
+                      <td>Thu. 1/23/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #4b698b;">
+                      <td>A12: User Notifications (4-6hrs)</td>
+                      <td>Mon. 2/24/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #4b698b;">
+                      <td>A13: Enhancing the Annotator (2-4hrs)</td>
+                      <td>Mon. 2/24/2025</td>
+                    </tr>
+
+                    <tr style="color: #f9f9f9; background: #657f8d;">
+                      <td rowspan="2">Group 3</td>
+                      <td>A15: Upgrading Subscription Using Stripe (4-6hrs)</td>
+                      <td>Thu. 3/6/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #657f8d;">
+                      <td>A16: Data Restoration (12-24hrs)</td>
+                      <td>Thu. 3/6/2025</td>
+                    </tr>
+
+                    <tr style="color: #f9f9f9; background: #475c77;">
+                      <td rowspan="4">Group 4</td>
+                      <td>A17: Scaling the Web Server (4-6hrs)</td>
+                      <td>Tue. 3/11/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #475c77;">
+                      <td>A18: Load Testing the Web Server (4-6hrs)</td>
+                      <td>Tue. 3/11/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #475c77;">
+                      <td>A19: Scaling the Annotator (2-4hrs)</td>
+                      <td>Tue. 3/11/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #475c77;">
+                      <td>A20: Load Testing the Annotator (4-6hrs)</td>
+                      <td>Tue. 3/11/2025</td>
+                    </tr>
+
+                    <tr style="color: #f9f9f9; background: #434f60;">
+                      <td rowspan="4">Quiz</td>
+                      <td>Quiz 1</td>
+                      <td>Thu. 1/23/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #434f60;">
+                      <td>Quiz 2</td>
+                      <td>Thu. 2/13/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #434f60;">
+                      <td>Quiz 3</td>
+                      <td>Thu. 2/27/2025</td>
+                    </tr>
+                    <tr style="color: #f9f9f9; background: #434f60;">
+                      <td>Challenge Test</td>
+                      <td>Thu. 3/13/2025</td>
+                    </tr>
+
+                  </tbody>
+                </table>
+                <p class="small">* Dates may change depending on our progress in class. Notifications of any changes will be posted on Ed Discussion.</p>
+
+                <h4 id="submissions">Submitting Assignments</h4>
+
+                <p>You are required to submit all assignments in this class via GitHub. A submission link to our GitHub classroom is provided in each assignment. You must follow the link to create your repository for each assignment. The first time you do this you will be prompted to link your GitHub account to your CNetID listed in the GitHub classroom roster. You <i>must link</i> your GitHub ID to the class roster, otherwise your assignments will not be graded.</p>
+
+                <p>The basic flow for using GitHub to submit assignments is described below—please ask on Ed if anything is unclear; <i>do not wait</i> until the last minute to tell us that you’re having GitHub issues and that your assignment will be late.</p>
+
+                <p>The due date and time is listed at the top of each assignment, e.g., <b>Due: Thursday, January 23, 2023 at 5:30pm CST</b>.</p>
+
+                <p>We will treat the most recent commit timestamp displayed in GitHub as your submission time. In the case where an assignment specifies that you include a commit message (e.g., “A14 - Final Submission”), we will consider <i>the most recent commit with that message</i> as the submission time. Please make sure you understand this. <b>You will receive a “U” if there are any changes to your code or commits after the deadline&mdash;please don’t modify the repository or any other part of your code in the AWS environment after the deadline</b>.</p>
+
+                <h4 id="resubmissions">Resubmissions and Late Submissions</h4>
+
+                <p>Under our grading scheme you have the option to resubmit an assignment in order to improve your grade or request a 24-hour extension to submit an assignment late. During the quarter you may exercise these options up to <i>three times, in total</i> (for either resubmissions or late assignments).</p>
+
+                <h5>Resubmissions</h5>
+
+                <p>If you receive a “U” on an assignment you may revise and resubmit it. The following apply to resubmissions:</p>
+
+                <ul>
+                  <li>You may only resubmit an assignment if the assignment was originally submitted on time, i.e., before the deadline specified in the assignment.</li>
+                  <li>All revised work must be resubmitted <u><i>within three days of receiving the original grade on the grading branch in your GitHub repository&mdash;no exceptions/extensions</i></u>!</li>
+                  <li>You may not resubmit an assignment more than once.</li>
+                </ul>
+
+                <p>If you decide to revise your work and resubmit, please do the following:</p>
+
+                <ul>
+                  <li>Create a branch named <code>&lt;assignment_number&gt;-resubmit</code>, e.g., if re-submitting Assignment 14 you must create branch <code>a14-resubmit</code>.</li>
+                  <li>IMPORTANT: Post a private note on Ed informing us that you have resubmitted. If you don’t notify us via Ed we will not know that there is a resubmission for grading and, if the AWS environment is cleaned up in the interim, your efforts will have been wasted.</li>
+                </ul>
+
+                <p>After reviewing your resubmission we will update the <code>grade.txt</code> file in the grading branch in GitHub.</p>
+
+                <h5>Late Submissions</h5>
+
+                <p>Late submissions will not be considered for grading but you may request a 24-hour extension. If you want to exercise this option, you must <i>notify us before the due date/time</i> by posting a private note in Ed Discussion. Any submission <i>beyond 24 hours after the due date/time</i> will not be graded. Please don’t ask for exceptions.</p>
+
+                <h4 id="github">Using GitHub</h4>
+
+                <p>There are countless GitHub “quickstart” guides online (e.g. <a target="_blank" href="http://rogerdudler.github.io/git-guide/">git&mdash;the simple guide&nbsp;<i class="fa-regular fa-arrow-up-right-from-square"></i></a>), but for our purposes you can just follow this process:</p>
+
+                <ol>
+                  <li>Create a remote repository on GitHub. For each homework submission, simply click on the “Submit” link that will be provided in the assignment document and follow the prompts. For example, if I were submitting A3, it would create a repo called <code>a3-vasv</code>.</li><br />
+                  
+                  <li>Clone the repository to your laptop (or EC2 instance):<br />
+                    <div class="card bg-light">
+                      <div class="code-text">
+                        <code><pre>$ git clone https://github.com/mpcs-cc/a3-vasv.git
+                Cloning into 'a3-vasv...
+                ...
+                remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+                Unpacking objects: 100% (4/4), done.
+                        </pre></code>
+                      </div>
+                    </div>
+                  </li><br />
+
+                  <li>Add your homework file(s) to the working directory:<br />
+                    <div class="card bg-light">
+                      <div class="code-text">
+                        <code><pre>$ cd a3-vasv
+                $ touch a3.py
+                        </pre></code>
+                      </div>
+                    </div>
+                  </li><br />
+
+                  <li>When you're ready to commit your new file(s) to the GitHub repository, first <b>add</b> them to the staging area (there is no output from this command): <code>git add .</code></li><br />
+
+                  <li>Create a <b>commit</b> (with an appropriate comment):</li>
+                    <div class="card bg-light">
+                      <div class="code-text">
+                        <code><pre>$ git commit -m "My first A3 commit"
+                1 file changed, 58 insertions(+)
+                create mode 100644 a3.py
+                        </pre></code>
+                      </div>
+                    </div>
+                  </li><br />
+
+                  <li><b>Push</b> the local changes to the remote (GitHub) repository:
+                    <div class="card bg-light">
+                      <div class="code-text">
+                        <code><pre>$ git push origin main
+                Enumerating objects: 7, done.
+                Counting objects: 100% (7/7), done.
+                Delta compression using up to 8 threads
+                Compressing objects: 100% (4/4), done.
+                Writing objects: 100% (6/6), 532 bytes | 532.00 KiB/s, done.
+                Total 6 (delta 1), reused 0 (delta 0)
+                remote: Resolving deltas: 100% (1/1), done.
+                To https://github.com/mpcs-cc/a3-vasv.git
+                1afd4fd..74fe452  main -> main
+                        </pre></code>
+                      </div>
+                    </div>
+                  </li><br />
+
+                  <li>Repeat the "<b>add → commit → push</b>" cycle every time you want to update the remote repository.</li>
+                </ol>
+
+                <div class="card bg-warning">
+                  <h4 class="card-header">VERY IMPORTANT NOTE</h4>
+                  <div class="card-body">
+                    <p class="card-text">All commits to your repository <i><u>must be made using the GitHub account that is linked to your CNetID when you first accept an assignment in this class</u></i>. If for some reason you need to change your account during the course of the quarter, you must get approval first. Please do not commit code using any other GitHub account; doing so will result in an automatic “U” for the assignment and potentially an "F" for the class.</p>
+                  </div>
+                </div>
+                <br />
+
+                <h4 id="branches">Working with Git Branches</h4>
+
+                <p>Since you’re the only one working in your repository you can make and commit all changes directly into the <code>main</code> (default) branch. However, when the work becomes a bit more complex during the capstone project, you will need to use branches to avoid breaking any working code.</p>
+
+                <p>Let’s say your <code>main</code> branch contains code from past assignments, and you have one last assignment to complete. You can create a branch and work on the assignment in that branch:<br />
+                  <div class="card bg-light">
+                    <div class="code-text">
+                      <code><pre>$ git checkout -b 'a20'
+                Switched to a new branch 'a20'
+                      </pre></code>
+                    </div>
+                  </div>
+                </p>
+
+                <p>Now make all your changes. Once you have it working, commit updated code as before:<br />
+                  <div class="card bg-light">
+                    <div class="code-text">
+                      <code><pre>$ git add .
+                $ git commit -m "Finished the CAPSTONE!!"
+                [a20 8deb085] Finished the CAPSTONE!!
+                1 file changed, 1 insertion(+), 1 deletion(-)
+                      </pre></code>
+                    </div>
+                  </div>
+                </p>
+
+                <p>Then, merge the <code>a20</code> branch back into <code>main</code>:<br />
+                  <div class="card bg-light">
+                    <div class="code-text">
+                      <code><pre>$ git checkout main
+                Switched to branch 'main'
+                Your branch is up to date with 'origin/main'.
+                $ git merge a20
+                Updating 74fe452..8deb085
+                Fast-forward
+                ... | 2 +-
+                1 file changed, 1 insertion(+), 1 deletion(-)
+                      </pre></code>
+                    </div>
+                  </div>
+                </p>
+
+                <p>And, finally, push <code>main</code> to the remote (GitHub) repo:<br />
+                  <div class="card bg-light">
+                    <div class="code-text">
+                      <code><pre>$ git push
+                Enumerating objects: 5, done.
+                Counting objects: 100% (5/5), done.
+                Delta compression using up to 8 threads
+                Compressing objects: 100% (2/2), done.
+                Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
+                Total 3 (delta 1), reused 0 (delta 0)
+                remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+                To https://github.com/mpcs-cc/gas-instructor.git
+                74fe452..8deb085  main -> main
+                      </pre></code>
+                    </div>
+                  </div>
+                </p>
+
+                <h4 id="reporting">Grade Reporting</h4>
+
+                <p>When your assignment is graded, we will add a “grading” branch to your repository. This branch includes a file called grade.txt that contains your grade and comments/feedback from the grader. You are expected to review the grading branch and, if you have questions/concerns about the accuracy of your grade that you would like us to review, please post a private note on Ed&mdash;DO NOT email me or the TAs directly.
+
+                <p><b>Make sure that you have GitHub notifications turned on so that you're notified when the grading branch is pushed to your repository. You are responsible for checking the grading branch in a timely manner if your wish to re-submit an assignment (<a href="#resubmissions">see above</a>) or otherwise have your grade reviewed.</b></p>
+
+                <p>The grade in your grading branch is not the final/official grade. Once the TA pushes the grading branch to remote I will review and then publish grades on Canvas (as Canvas is the only officially sanctioned system for communicating grades). There will typically be a few days lag between your grade being pushed to GitHub and my posting it on Canvas. <i>Please do not wait until Canvas grades are posted before resubmitting because it will usually be past the re-submission deadline</i>.</p>
+
+                <h4 id="ext-sources">Using External Sources</h4>
+
+                <p>I fully expect you will use external sources (such as StackOverflow) to research potential solutions and find sample code for your assignments. While you may consult and be guided by such sources, you are expected to write your own code.</p>
+
+                <p>In particular, you may not use AI systems, such as ChatGPT or GitHub Copilot, to write or generate any of your code. Using those systems in a manner similar to consulting online resources (e.g., asking ChatGPT something like “How do I play a sound using pygame?”) is technically acceptable, but you should take any answer with a healthy dose of salt, as these systems will sometimes provide unequivocally wrong answers.</p>
+
+                <p>Any evidence or suggestion that your code was written/generated by someone or something other than you will be grounds for an immediate Unsatisfactory grade, without recourse on your part ...yes, you will be guilty without being offered the chance to defend yourself :-(( In some cases, the penalty may be an “F” for the class.</p>
+                </div>
+            </section>
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="container py-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>

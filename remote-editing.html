@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Cloud Computing - Remote Editing</title>
+        <meta content="Class website for the Cloud Computing course in the UChicago Masters Program in Computer Science" name="description">
+        <meta content="uchicago, mpcs, cloud computing" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" href="assets/img/favicon.ico">
+        <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2d35b6939d.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet"href="assets/vendor/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet"href="assets/vendor/swiper/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <!-- Uncomment below if you prefer to use text as a logo -->
+                <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto" href="/">Class Home</a></li>
+                        <li><a class="nav-link scrollto" href="assignments-grading">Assignments</a></li>
+                        <li><a class="nav-link scrollto" href="asking-questions">Asking Questions</a></li>
+                        <li><a class="nav-link scrollto" href="working-with-python">Working with Python</a></li>
+                        <li><a class="nav-link scrollto active" href="remote-editing">Remote Editing</a></li>
+                        <li><a class="nav-link scrollto" href="https://home.uchicago.edu/vas">My UChicago Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </header><!-- End Header -->
+
+        <main id="main">
+
+            <!-- ======= Content Section ======= -->
+            <section id="content">
+                <div class="container">
+                    <div class="section-title">
+                        <div class="page-head">
+                            <h2>Remote File Editing (with Sublime)</h2>
+                        </div>
+                    </div>
+
+                    <div class="card text-dark bg-warning-subtle">
+                        <h4 class="card-header">Very , Very, VERY IMPORTANT WARNING</h4>
+                        <div class="card-body">
+                            <p class="card-text">If you use VS Code as your editor/IDE you will run into major issues in this class that we cannot resolve. The issue is that VS Code does not behave nicely when editing files on our remote virtual machines, which you will need to do in almost every assignment. For this reason, I very strongly recommend you use a different editor or IDE like <a href="https://www.sublimetext.com/" target="_blank">Sublime Text <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (free version available) or <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (via the <a href="https://www.jetbrains.com/academy/student-pack/" target="_blank">free JetBrains Student Pack <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>).</p>
+                        </div>
+                    </div>
+                    <br />
+
+                    <p>As the class progresses, you will find yourself doing most/all of your work directly on EC2 instances. Hence, a common request is to easily create an ssh/sftp connection between the text editor on your local machine and an EC2 instance, so you can edit files on the remote machine as if they were local. Depending on the editor you use, there may be a remote editing plug-in available that allows you to do just that.</p>
+
+                    <p>If you use Sublime Text, I already have the <code>rmate</code> package included in the class base AMI. In order to enable remote editing you just need to do the following on your MacOS or Linux laptop (see below for Windows):</p>
+
+                    <ol>
+                        <li>Install the rsub plug-in for Sublime Text, available through the Package Control tool:
+                            <ul>
+                                <li>Go to <b>Tools → Command Palette → Package Control: Install Package</b>.</li>
+                                <li>Type ‘rsub’ and install.</li>
+                            </ul>
+                        </li>
+                        <br />
+                        <li>Configure remote port forwarding for the EC2 instance in your <code>~/.ssh/config</code> file to enable the connection. The easiest approach is to forward the port for all remote hosts (so that you don’t need to update it as your instance DNS name changes):<br />
+                            <div class="card bg-light">
+                                <div class="code-text">
+                                    <code><pre>
+Host *
+    Hostname %h
+    RemoteForward 52698 127.0.0.1:52698
+                                    </pre></code>
+                                </div>
+                            </div>
+                        </li>
+                        <br />
+                        <li>Now, make sure Sublime is already open on your laptop, connect to the EC2 instance, and edit a file on your instance as follows: <code>rmate &lt;filename_to_edit&gt;</code>. If it’s a system/root-owned file, you must use: <code>sudo rmate &lt;filename_to_edit&gt;</code>.</li>
+                        <br />
+                        <li>Alternatively, there are a few free sftp clients available that can be configured to open files in a local editor. If you don’t mind paying for software, try <a target="_blank" href="https://panic.com/transmit/">Transmit</a> which I’ve used for years—it has great connectivity options and even allows you to browse your Amazon storage directly, which will come in handy later on in the course.</li>
+                    </ol>
+
+                    <h4>Using Sublime for Remote Editing on Windows</h4>
+
+                    <p>Additional configuration is required to use Sublime for remote editing on Windows.</p>
+
+                    <ol>
+                        <li><i>Convert your private SSH key from .ppk to .pem format</i>. If you generated your AWS keypair in .ppk format you will need to convert it to .pem (or OpenSSH) format using PuTTYgen by <a target="_blank" href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/putty.html#putty-private-key">following the instructions here <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>. PuTTYgen was installed when you installed PuTTY, but if not, you will need to install it separately. Note: When exporting the key you should use the <i>“Conversions” → “Export OpenSSH key (force new file format)”</i> option. </li>
+                        <br />
+                        <li>Set up the rsub package in Sublime; on Windows the installation is slightly different to that described above.
+                            <ul>
+                                <li>Go to <b>Preferences → Package Control: Install Package</b>.</li>
+                                <li>Type ‘rsub’ and install.</li>
+                                <li>Confirm the installation by checking that rsub is listed in <b>Preferences → Package Settings</b>.</li>
+                            </ul>
+                        </li>
+                        <br />
+                        <li>In a PowerShell window run the following command:<br />
+                            <div class="card bg-light">
+                                <div class="code-text">
+                                    <code><pre>
+PS C:\Users\userfoo> ssh -R 52698:127.0.0.1:52698 ubuntu@&lt;DNS_name_or_IP_address&gt; -i &lt;full_path_to_your_.pem_key&gt;
+                                    </pre></code>
+                                </div>
+                            </div>
+                            where <code>&lt;DNS_name_or_IP_address&gt</code> is the instance on which you wish to edit files.
+                        </li>
+                        <br />
+                        <li>On your instance, edit files as above: code rmate &lt;filename_to_edit&gt; or sudo rmate &lt;filename_to_edit&gt;
+                    </ol>
+
+                </div>
+            </section>
+
+            <!-- ======= Contact Section ======= -->
+            <section id="contact" class="contact">
+
+                <div class="container">
+                    <div class="section-title">
+                        <h2>Contact</h2>
+                    </div>
+                    <div class="info">
+                        <div class="email">
+                            <i class="bi bi-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>vas[at]uchicago.edu</p>
+                        </div>
+                        <div>&nbsp;</div>
+                    </div>
+                </div>
+            </section><!-- End Contact Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="container py-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+        </footer><!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>
