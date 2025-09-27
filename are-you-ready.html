@@ -71,8 +71,10 @@
 
                     <p>Consider the code snippets below. I expect that you can determine the result within a few seconds, without consulting any external source.</p>
 
-                    <div class="code-text">
-                        <code><pre>
+                    <div class="card bg-light">
+                        <div class="code-text">
+                            <div class="code-text">
+                                <code><pre>
 # Sample 1
 a_list = [[5, 2], [9, 4], [3, 3]]
 a_new_list = sorted(a_list, key=lambda x: x[1])
@@ -93,15 +95,19 @@ working_dir = content['fpath']
 file_name = content['fname']
 if not os.path.exists(working_dir + file_name):
     os.makedirs(working_dir + file_name)
-                        </pre></code>
+                                </pre></code>
+                            </div>
+                        </div>
                     </div>
 
                     <h4>Command Line Proficiency</h4>
 
                     <p>You should be comfortable writing commands and scripts like the samples shown below.</p>
 
-                    <div class="code-text">
-                        <code><pre>
+                    <div class="card bg-light">
+                        <div class="code-text">
+                            <div class="code-text">
+                                <code><pre>
 # Sample 1:
 aws ec2 describe-instances --output text | grep RESERVATIONS | awk '{print $3}'> sec_groups
 
@@ -112,8 +118,11 @@ export MPCS_LOG_FILE=mpcs.log
 if [ ! -e $MPCS_LOGS_ROOT/$MPCS_LOG_FILE ]; then
     touch $MPCS_LOGS_ROOT/$MPCS_LOG_FILE;
 fi
-                        </pre></code>
-                        
+                                </pre></code>
+                            </div>
+                        </div>
+                    </div>
+                                            
                     <p>If you understand the commands covered in the MPCS Unix Bootcamp, you should be OK. In addition, William Shotts's <a href="http://linuxcommand.org/" target="_blank">The Linux Command Line</a> is a very approachable tutorial/reference for those new to the command line.</p>
 
                     <h4>Web Programming Proficiency</h4>
