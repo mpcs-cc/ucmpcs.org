@@ -58,73 +58,78 @@
             <!-- ======= Main Content Section ======= -->
             <section id="cloud">
 
-              <div class="container">
-                  <div class="section-title">
-                      <div class="page-head">
-                          <h2>Are you ready for MPCS 51083?</h2>
-                      </div>
-                  </div>
+                <div class="container">
+                    <div class="section-title">
+                        <div class="page-head">
+                            <h2>Are you ready for MPCS 51083?</h2>
+                        </div>
+                    </div>
+                          
+                    <p>Students sometimes struggle to keep up with homework assignments due to limited experience with Python and knowledge of the Linux command line. If you're planning to sign up for this class take a few minutes to review the following; if you have doubts about your proficiency in these areas please talk with me before registering.</p>
                         
-                  <p>Students sometimes struggle to keep up with homework assignments due to limited experience with Python and knowledge of the Linux command line. If you're planning to sign up for this class take a few minutes to review the following; if you have doubts about your proficiency in these areas please talk with me before registering.</p>
+                    <h4>Python Proficiency</h4>
+
+                    <p>Consider the code snippets below. I expect that you can determine the result within a few seconds, without consulting any external source.</p>
+
+                    <div class="code-text">
+                        <code><pre>
+# Sample 1
+a_list = [[5, 2], [9, 4], [3, 3]]
+a_new_list = sorted(a_list, key=lambda x: x[1])
+print(f"The new list is {a_new_list}")
+
+# Sample 2
+if 'object_id' in request:
+    response['fname'] = request['object_id'][:request['object_id'].index("~")][-36:]
+else:
+    response['fname'] = 12 * '0x0'
+
+# Sample 3:
+import os
+import json
+
+content = json.loads(request.body)
+working_dir = content['fpath']
+file_name = content['fname']
+if not os.path.exists(working_dir + file_name):
+    os.makedirs(working_dir + file_name)
+                        </pre></code>
+                    </div>
+
+                    <h4>Command Line Proficiency</h4>
+
+                    <p>You should be comfortable writing commands and scripts like the samples shown below.</p>
+
+                    <div class="code-text">
+                        <code><pre>
+# Sample 1:
+aws ec2 describe-instances --output text | grep RESERVATIONS | awk '{print $3}'> sec_groups
+
+# Sample 2:
+export MPCS_LOGS_ROOT=./log/
+export MPCS_LOG_FILE=mpcs.log
+[[ -d ./log ]] || mkdir $MPCS_LOGS_ROOT
+if [ ! -e $MPCS_LOGS_ROOT/$MPCS_LOG_FILE ]; then
+    touch $MPCS_LOGS_ROOT/$MPCS_LOG_FILE;
+fi
+                        </pre></code>
                         
-                  <div class="icon-box">
-                      <h4>Python Proficiency</h4>
-                      <p>Consider the code snippets below. I expect that you can determine the result within a few seconds, without consulting any external source.</p>
-                      <code>
-                          # Sample 1<br />
-                          a_list = [[5, 2], [9, 4], [3, 3]]<br />
-                          a_new_list = sorted(a_list, key=lambda x: x[1])<br />
-                          print(f"The new list is {a_new_list}")<br />
-                          <br />
-                          # Sample 2<br />
-                          if 'object_id' in request:<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;response['fname'] = request['object_id'][:request['object_id'].index("~")][-36:]<br />
-                          else:<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;response['fname'] = 12 * '0x0'<br />
-                          <br />
-                          # Sample 3:<br />
-                          import os, json<br />
-                          content = json.loads(request.body)<br />
-                          working_dir = content['fpath']<br />
-                          file_name = content['fname']<br />
-                          if not os.path.exists(working_dir + file_name):<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(working_dir + file_name)
-                      </code>
-                  </div>
+                    <p>If you understand the commands covered in the MPCS Unix Bootcamp, you should be OK. In addition, William Shotts's <a href="http://linuxcommand.org/" target="_blank">The Linux Command Line</a> is a very approachable tutorial/reference for those new to the command line.</p>
 
-                  <div class="icon-box">
-                      <h4>Command Line Proficiency</h4>
-                      <p>You should be comfortable writing commands and scripts like the samples shown below.</p>
-                      <code>
-                          # Sample 1:<br />
-                          aws ec2 describe-instances --output text | grep RESERVATIONS | awk '{print $3}'> sec_groups<br />
-                          <br />
-                          # Sample 2:<br />
-                          export MPCS_LOGS_ROOT=./log/<br />
-                          export MPCS_LOG_FILE=mpcs.log<br />
-                          [[ -d ./log ]] || mkdir $MPCS_LOGS_ROOT<br />
-                          if [ ! -e $MPCS_LOGS_ROOT/$MPCS_LOG_FILE ]; then<br />
-                          &nbsp;&nbsp;&nbsp;&nbsp;touch $MPCS_LOGS_ROOT/$MPCS_LOG_FILE;<br />
-                          fi
-                      </code>
-                      <p><br />If you understand the commands covered in the MPCS Unix Bootcamp, you should be OK. In addition, William Shotts's <a href="http://linuxcommand.org/" target="_blank">The Linux Command Line</a> is a very approachable tutorial/reference for those new to the command line.</p>
-                  </div>
+                    <h4>Web Programming Proficiency</h4>
 
-                  <div class="icon-box">
-                      <h4>Web Programming Proficiency</h4>
-                      <p>While this is not a web development course, our programming assignments are all related to building and interacting with web services via APIs. At minimum, you should be familiar with:</p>
-                      <ul>
-                          <li>HTTP request-response mechanisms, including request headers and response codes</li>
-                          <li>HTTP verbs and their appropriate use (e.g. using GET vs. POST)</li>
-                          <li>The REST (REpresentational State Transfer) architectural style and approach&mdash;check out <a target="_blank" href="https://github.com/tfredrich/RestApiTutorial.com/raw/master/media/RESTful%20Best%20Practices-v1_2.pdf">this nice summary</a> if you're a little rusty</li>
-                          <li>Simple HTML forms (input field and tables) and basic CSS</li>
-                          <li>Working with JSON, and especially Python's <code>json</code> library</li>
-                      </ul>
-                      <p>The <a href="https://realpython.com/python-requests/" target=_blank">Real Python guide to requests</a> has a good introduction with simple examples that you can test using <a href="https://learning.postman.com/docs/getting-started/introduction/" target="_blank">Postman</a>, a very versatile API development tool.</p>
-                  </div>
+                    <p>While this is not a web development course, our programming assignments are all related to building and interacting with web services via APIs. At minimum, you should be familiar with:</p>
+                    <ul>
+                        <li>HTTP request-response mechanisms, including request headers and response codes</li>
+                        <li>HTTP verbs and their appropriate use (e.g. using GET vs. POST)</li>
+                        <li>The REST (REpresentational State Transfer) architectural style and approach&mdash;check out <a target="_blank" href="https://github.com/tfredrich/RestApiTutorial.com/raw/master/media/RESTful%20Best%20Practices-v1_2.pdf">this nice summary</a> if you're a little rusty</li>
+                        <li>Simple HTML forms (input field and tables) and basic CSS</li>
+                        <li>Working with JSON, and especially Python's <code>json</code> library</li>
+                    </ul>
 
-              </div>
-
+                    <p>The <a href="https://realpython.com/python-requests/" target=_blank">Real Python guide to requests</a> has a good introduction with simple examples that you can test using <a href="https://learning.postman.com/docs/getting-started/introduction/" target="_blank">Postman</a>, a very versatile API development tool.</p>
+                </div>
+          
             </section><!-- End Main Content Section -->
 
         </main><!-- End #main -->
