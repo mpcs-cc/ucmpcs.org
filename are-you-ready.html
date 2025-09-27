@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+        <title>Cloud Computing - Are You Ready?</title>
+        <meta content="Class website for the Cloud Computing course in the UChicago Masters Program in Computer Science" name="description">
+        <meta content="uchicago, mpcs, cloud computing" name="keywords">
+
+        <!-- Favicons -->
+        <link rel="icon" type="image/png" href="assets/img/favicon-96x96.png" sizes="96x96" />
+        <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+        <link rel="shortcut icon" href="assets/img/favicon.ico" />
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png" />
+        <link rel="manifest" href="assets/img/site.webmanifest" />
+
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Dosis:300,400,500,,600,700,700i|Lato:300,300i,400,400i,700,700i">
+
+        <!-- Vendor CSS Files -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://kit.fontawesome.com/2d35b6939d.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="assets/vendor/boxicons/css/boxicons.min.css">
+        <link rel="stylesheet"href="assets/vendor/glightbox/css/glightbox.min.css">
+        <link rel="stylesheet"href="assets/vendor/swiper/swiper-bundle.min.css">
+
+        <!-- Template Main CSS File -->
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+
+    <body>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="fixed-top">
+            <div class="container d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>
+                <!-- Uncomment below if you prefer to use text as a logo -->
+                <!-- <h1 class="logo"><a href="index.html">Butterfly</a></h1> -->
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto active" href="/">Class Home</a></li>
+                        <li><a class="nav-link scrollto" href="assignments-grading">Assignments</a></li>
+                        <li><a class="nav-link scrollto" href="asking-questions">Asking Questions</a></li>
+                        <li><a class="nav-link scrollto" href="working-with-python">Working with Python</a></li>
+                        <li><a class="nav-link scrollto" href="remote-editing">Remote Editing</a></li>
+                        <li><a class="nav-link scrollto" href="https://home.uchicago.edu/vas">My UChicago Home</a></li>
+                    </ul>
+                    <i class="bi bi-list mobile-nav-toggle"></i>
+                </nav><!-- .navbar -->
+            </div>
+        </header><!-- End Header -->
+
+        <!-- ======= Hero Section ======= -->
+        <section id="hero" class="d-flex align-items-center">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+                        <h1>Welcome to my home at the University of Chicago</h1>
+                        <h2>I lead the customer team for <a target="_blank" href="https://www.globus.org">Globus</a> and teach in the <a target="_blank" href="https://masters.cs.uchicago.edu">Masters Program in Computer Science</a>. I'm also an advisor to early stage software companies in the areas of go-to-market strategy, product management, and marketing.</h2>
+                        <div>
+                            <a href="#contact" class="btn-get-started scrollto">Contact me</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-1 order-lg-2 hero-img">
+                        <img src="assets/img/hero-img.jpg" class="img-fluid w-75" alt="Gary Larson cartoon depicting a decaying corpse at the piano with a caption that says shh the master is decomposing">
+                    </div>
+                </div>
+            </div>
+
+        </section><!-- End Hero -->
+
+        <main id="main">
+
+            <!-- ======= Main Content Section ======= -->
+            <section id="cloud">
+
+              <div class="container">
+                  <div class="section-title">
+                      <div class="page-head">
+                          <h2>Are you ready for MPCS 51083?</h2>
+                      </div>
+                  </div>
+                        
+                  <p>Students sometimes struggle to keep up with homework assignments due to limited experience with Python and knowledge of the Linux command line. If you're planning to sign up for this class take a few minutes to review the following; if you have doubts about your proficiency in these areas please talk with me before registering.</p>
+                        
+                  <div class="icon-box">
+                      <h4>Python Proficiency</h4>
+                      <p>Consider the code snippets below. I expect that you can determine the result within a few seconds, without consulting any external source.</p>
+                      <code>
+                          # Sample 1<br />
+                          a_list = [[5, 2], [9, 4], [3, 3]]<br />
+                          a_new_list = sorted(a_list, key=lambda x: x[1])<br />
+                          print(f"The new list is {a_new_list}")<br />
+                          <br />
+                          # Sample 2<br />
+                          if 'object_id' in request:<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;response['fname'] = request['object_id'][:request['object_id'].index("~")][-36:]<br />
+                          else:<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;response['fname'] = 12 * '0x0'<br />
+                          <br />
+                          # Sample 3:<br />
+                          import os, json<br />
+                          content = json.loads(request.body)<br />
+                          working_dir = content['fpath']<br />
+                          file_name = content['fname']<br />
+                          if not os.path.exists(working_dir + file_name):<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;os.makedirs(working_dir + file_name)
+                      </code>
+                  </div>
+
+                  <div class="icon-box">
+                      <h4>Command Line Proficiency</h4>
+                      <p>You should be comfortable writing commands and scripts like the samples shown below.</p>
+                      <code>
+                          # Sample 1:<br />
+                          aws ec2 describe-instances --output text | grep RESERVATIONS | awk '{print $3}'> sec_groups<br />
+                          <br />
+                          # Sample 2:<br />
+                          export MPCS_LOGS_ROOT=./log/<br />
+                          export MPCS_LOG_FILE=mpcs.log<br />
+                          [[ -d ./log ]] || mkdir $MPCS_LOGS_ROOT<br />
+                          if [ ! -e $MPCS_LOGS_ROOT/$MPCS_LOG_FILE ]; then<br />
+                          &nbsp;&nbsp;&nbsp;&nbsp;touch $MPCS_LOGS_ROOT/$MPCS_LOG_FILE;<br />
+                          fi
+                      </code>
+                      <p><br />If you understand the commands covered in the MPCS Unix Bootcamp, you should be OK. In addition, William Shotts's <a href="http://linuxcommand.org/" target="_blank">The Linux Command Line</a> is a very approachable tutorial/reference for those new to the command line.</p>
+                  </div>
+
+                  <div class="icon-box">
+                      <h4>Web Programming Proficiency</h4>
+                      <p>While this is not a web development course, our programming assignments are all related to building and interacting with web services via APIs. At minimum, you should be familiar with:</p>
+                      <ul>
+                          <li>HTTP request-response mechanisms, including request headers and response codes</li>
+                          <li>HTTP verbs and their appropriate use (e.g. using GET vs. POST)</li>
+                          <li>The REST (REpresentational State Transfer) architectural style and approach&mdash;check out <a target="_blank" href="https://github.com/tfredrich/RestApiTutorial.com/raw/master/media/RESTful%20Best%20Practices-v1_2.pdf">this nice summary</a> if you're a little rusty</li>
+                          <li>Simple HTML forms (input field and tables) and basic CSS</li>
+                          <li>Working with JSON, and especially Python's <code>json</code> library</li>
+                      </ul>
+                      <p>The <a href="https://realpython.com/python-requests/" target=_blank">Real Python guide to requests</a> has a good introduction with simple examples that you can test using <a href="https://learning.postman.com/docs/getting-started/introduction/" target="_blank">Postman</a>, a very versatile API development tool.</p>
+                  </div>
+
+              </div>
+
+            </section><!-- End Main Content Section -->
+
+        </main><!-- End #main -->
+
+        <!-- ======= Footer ======= -->
+        <footer id="footer">
+
+            <div class="container py-4">
+                <div class="copyright">
+                    &copy; Copyright <strong><span>Butterfly</span></strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    <!-- All the links in the footer should remain intact. -->
+                    <!-- You can delete the links only if you purchased the pro version. -->
+                    <!-- Licensing information: https://bootstrapmade.com/license/ -->
+                    <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/butterfly-free-bootstrap-theme/ -->
+                    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                </div>
+            </div>
+
+        </footer><!-- End Footer -->
+
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Vendor JS Files -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+        <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+        <script src="assets/vendor/purecounter/purecounter.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+    </body>
+
+</html>
