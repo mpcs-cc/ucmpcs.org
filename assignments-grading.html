@@ -334,9 +334,9 @@
 
                 <h4 id="submissions">Submitting Assignments</h4>
 
-                <p>You must submit assignments in this class via GitHub. A submission link to our GitHub classroom is provided in each assignment; follow the link to create your repository for each assignment. The first time you do this (for assignment A2) you will be prompted to link your GitHub account to your CNetID listed in the GitHub classroom roster. You <i>must link</i> your GitHub ID to the class roster, otherwise your assignments will not be graded.</p>
+                <p>You must submit assignments in this class via GitHub. A submission link to our GitHub classroom is provided in each assignment; follow the link to create your repository for the assignment. The first time you do this (for assignment A2) you will be prompted to link your GitHub account to your CNetID listed in the GitHub classroom roster. You <i>must link</i> your GitHub ID to the class roster, otherwise your assignments will not be graded.</p>
 
-                <p>The basic flow for using GitHub to submit assignments is described below. Please ask on Ed if anything is unclear; <i>do not wait</i> until the last minute to tell us that you’re having GitHub issues and that your assignment will be late.</p>
+                <p>The basic flow for using GitHub to submit assignments is <a href="#github">described belo</a>. Please ask on Ed if anything is unclear; <i>do not wait</i> until the last minute to tell us that you’re having GitHub issues and that your assignment will be late.</p>
 
                 <p>The due date and time is listed at the top of each assignment, e.g., <b>Due: Thursday, January 29, 2026 at 5:30pm CST</b>.</p>
 
@@ -380,10 +380,10 @@
                     <div class="card bg-light">
                       <div class="code-text">
                         <code><pre>$ git clone https://github.com/mpcs-cc/a3-vasv.git
-                Cloning into 'a3-vasv...
-                ...
-                remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
-                Unpacking objects: 100% (4/4), done.
+Cloning into 'a3-vasv...
+...
+remote: Total 4 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
                         </pre></code>
                       </div>
                     </div>
@@ -393,7 +393,7 @@
                     <div class="card bg-light">
                       <div class="code-text">
                         <code><pre>$ cd a3-vasv
-                $ touch a3.py
+$ touch a3.py
                         </pre></code>
                       </div>
                     </div>
@@ -405,8 +405,8 @@
                     <div class="card bg-light">
                       <div class="code-text">
                         <code><pre>$ git commit -m "My first A3 commit"
-                1 file changed, 58 insertions(+)
-                create mode 100644 a3.py
+1 file changed, 58 insertions(+)
+create mode 100644 a3.py
                         </pre></code>
                       </div>
                     </div>
@@ -416,15 +416,13 @@
                     <div class="card bg-light">
                       <div class="code-text">
                         <code><pre>$ git push origin main
-                Enumerating objects: 7, done.
-                Counting objects: 100% (7/7), done.
-                Delta compression using up to 8 threads
-                Compressing objects: 100% (4/4), done.
-                Writing objects: 100% (6/6), 532 bytes | 532.00 KiB/s, done.
-                Total 6 (delta 1), reused 0 (delta 0)
-                remote: Resolving deltas: 100% (1/1), done.
-                To https://github.com/mpcs-cc/a3-vasv.git
-                1afd4fd..74fe452  main -> main
+Enumerating objects: 7, done.
+...
+Writing objects: 100% (6/6), 532 bytes | 532.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/mpcs-cc/a3-vasv.git
+1afd4fd..74fe452  main -> main
                         </pre></code>
                       </div>
                     </div>
@@ -449,7 +447,7 @@
                   <div class="card bg-light">
                     <div class="code-text">
                       <code><pre>$ git checkout -b 'a20'
-                Switched to a new branch 'a20'
+Switched to a new branch 'a20'
                       </pre></code>
                     </div>
                   </div>
@@ -459,9 +457,9 @@
                   <div class="card bg-light">
                     <div class="code-text">
                       <code><pre>$ git add .
-                $ git commit -m "Finished the CAPSTONE!!"
-                [a20 8deb085] Finished the CAPSTONE!!
-                1 file changed, 1 insertion(+), 1 deletion(-)
+$ git commit -m "Finished the CAPSTONE!!"
+[a20 8deb085] Finished the CAPSTONE!!
+1 file changed, 1 insertion(+), 1 deletion(-)
                       </pre></code>
                     </div>
                   </div>
@@ -471,13 +469,13 @@
                   <div class="card bg-light">
                     <div class="code-text">
                       <code><pre>$ git checkout main
-                Switched to branch 'main'
-                Your branch is up to date with 'origin/main'.
-                $ git merge a20
-                Updating 74fe452..8deb085
-                Fast-forward
-                ... | 2 +-
-                1 file changed, 1 insertion(+), 1 deletion(-)
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+$ git merge a20
+Updating 74fe452..8deb085
+Fast-forward
+... | 2 +-
+1 file changed, 1 insertion(+), 1 deletion(-)
                       </pre></code>
                     </div>
                   </div>
@@ -487,15 +485,13 @@
                   <div class="card bg-light">
                     <div class="code-text">
                       <code><pre>$ git push
-                Enumerating objects: 5, done.
-                Counting objects: 100% (5/5), done.
-                Delta compression using up to 8 threads
-                Compressing objects: 100% (2/2), done.
-                Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
-                Total 3 (delta 1), reused 0 (delta 0)
-                remote: Resolving deltas: 100% (1/1), completed with 1 local object.
-                To https://github.com/mpcs-cc/gas-instructor.git
-                74fe452..8deb085  main -> main
+Enumerating objects: 5, done.
+...
+Writing objects: 100% (3/3), 271 bytes | 271.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mpcs-cc/gas-instructor.git
+74fe452..8deb085  main -> main
                       </pre></code>
                     </div>
                   </div>
