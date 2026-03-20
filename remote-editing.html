@@ -60,19 +60,19 @@
                 <div class="container">
                     <div class="section-title">
                         <div class="page-head">
-                            <h2>Remote File Editing (with Sublime)</h2>
+                            <h2>Remote File Editing</h2>
                         </div>
                     </div>
 
                     <div class="card text-dark bg-warning-subtle">
-                        <h4 class="card-header">Very , Very, VERY IMPORTANT WARNING</h4>
+                        <h4 class="card-header">Very Important Warning</h4>
                         <div class="card-body">
-                            <p class="card-text">If you use VS Code as your editor/IDE you will run into major issues in this class that we cannot resolve. The issue is that VS Code does not behave nicely when editing files on our remote virtual machines, which you will need to do in almost every assignment. For this reason, I very strongly recommend you use a different editor or IDE like <a href="https://www.sublimetext.com/" target="_blank">Sublime Text <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (free version available) or <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (via the <a href="https://www.jetbrains.com/academy/student-pack/" target="_blank">free JetBrains Student Pack <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>).</p>
+                            <p class="card-text">If you use VS Code as your editor/IDE you will run into major issues in this class that we cannot resolve. The issue is that VS Code does not behave nicely when editing files on our remote virtual machines, which you will need to do in almost every assignment. For this reason, I recommend you use a different editor or IDE like <a href="https://www.sublimetext.com/" target="_blank">Sublime Text <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (free version available) or <a href="https://www.jetbrains.com/pycharm/" target="_blank">PyCharm <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a> (via the <a href="https://www.jetbrains.com/academy/student-pack/" target="_blank">free JetBrains Student Pack <i class="fa fa-classic fa-light fa-external-link" aria-hidden="true"></i></a>).</p>
                         </div>
                     </div>
                     <br />
 
-                    <p>As the class progresses, you will find yourself doing most/all of your work directly on EC2 instances. Hence, a common request is to easily create an ssh/sftp connection between the text editor on your local machine and an EC2 instance, so you can edit files on the remote machine as if they were local. Depending on the editor you use, there may be a remote editing plug-in available that allows you to do just that.</p>
+                    <p>As the class progresses, you will find yourself doing most/all of your work directly on EC2 instances. Hence, a common requirement is to easily create an ssh/sftp connection between the text editor on your local machine and an EC2 instance, so you can edit files on the remote machine as if they were local. Depending on the editor you use, there may be a remote editing plug-in available that allows you to do just that.</p>
 
                     <p>If you use Sublime Text, I already have the <code>rmate</code> package included in the class base AMI. In order to enable remote editing you just need to do the following on your MacOS or Linux laptop (see below for Windows):</p>
 
@@ -96,7 +96,7 @@ Host *
                             </div>
                         </li>
                         <br />
-                        <li>Now, make sure Sublime is already open on your laptop, connect to the EC2 instance, and edit a file on your instance as follows: <code>rmate &lt;filename_to_edit&gt;</code>. If it’s a system/root-owned file, you must use: <code>sudo rmate &lt;filename_to_edit&gt;</code>.</li>
+                        <li>Now, make sure Sublime is already open on your laptop, connect to the EC2 instance, and edit a file on your instance as follows: <code>rmate &lt;filename_to_edit&gt;</code>. (If it’s a system/root-owned file, you must use: <code>sudo rmate &lt;filename_to_edit&gt;</code>.)</li>
                         <br />
                         <li>Alternatively, there are a few free sftp clients available that can be configured to open files in a local editor. If you don’t mind paying for software, try <a target="_blank" href="https://panic.com/transmit/">Transmit</a> which I’ve used for years—it has great connectivity options and even allows you to browse your Amazon storage directly, which will come in handy later on in the course.</li>
                     </ol>
