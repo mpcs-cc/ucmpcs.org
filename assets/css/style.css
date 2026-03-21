@@ -687,3 +687,8 @@ section {
   color: #f9f9f9;
   --bs-table-bg: #434f60;
 }
+
+tr.text-primary td,
+tr.text-primary th {
+  color: inherit;
+}
