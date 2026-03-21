@@ -674,21 +674,13 @@ section {
 }
 
 .table-row-highlight-group1 {
-  color: #f9f9f9;
-  --bs-table-bg: #2e4c5c;
+  --bs-table-bg: #e6f2ff;
 }
 
 .table-row-highlight-group3 {
-  color: #f9f9f9;
-  --bs-table-bg: #657f8d;
+  --bs-table-bg: #cce6ff;
 }
 
 .table-row-highlight-quiz {
-  color: #f9f9f9;
-  --bs-table-bg: #434f60;
-}
-
-tr.text-primary td,
-tr.text-primary th {
-  color: inherit;
+  --bs-table-bg: #b3d9ff;
 }
