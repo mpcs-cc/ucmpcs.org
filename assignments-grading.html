@@ -75,10 +75,10 @@
                     <ul class="list-unstyled">
                         <li><a href="#specs-grading">Specifications Grading</a></li>
                         <li><a href="#assignments">Assignments</a></li>
-                        <li><a href="#submissions">Submitting Assignments</a></li>regular
-                        <li><a href="#resubmissions">Resubmissions and Late Submissions</a></li>
-                        <li><a href="#reporting">Grade Reporting</a></li>
+                        <li><a href="#submissions">Submitting Assignments</a></li>
                         <li><a href="#ext-sources">Using External Sources and AI Systems</a></li>
+                        <li><a href="#resubmissions">Extensions and Resubmissions</a></li>
+                        <li><a href="#reporting">Grade Reporting</a></li>
                         <li><a href="#github">Using GitHub</a></li>
                         <li><a href="#branches">Working with Git Branches</a></li>
                     </ul>
@@ -245,11 +245,12 @@
                                 </tr>
                             </tbody>
                         </table>
+                        <i class="fa-regular fa-circle-check"></i> = required, "&mdash;" = not applicable
                         </li>
                     </ol>
 
                 <div class="card text-white bg-secondary">
-                  <h4 class="card-header">IMPORTANT NOTE</h4>
+                  <h4 class="card-header">Pass/Fail Requirements</h4>
                   <div class="card-body">
                     <p class="card-text">If you are eligible&mdash;and elect&mdash;to take this class as Pass/Fail, you will need to meet the criteria for a “C+” as shown above in order to get a “Pass”, independent of the minimum passing grade for your program (MBA, CAPP, etc.).</p>
                   </div>
@@ -390,41 +391,6 @@
 
                 <p>We will treat the most recent commit timestamp displayed in GitHub as your submission time. In the case where an assignment specifies that you include a commit message (e.g., “A14 - Final Submission”), we will consider <i>the most recent commit with that message</i> as the submission time. Please make sure you understand this. <b>You will receive a “U” if there are any changes to your code or commits after the deadline&mdash;please don’t modify the repository or any other part of your code in the AWS environment after the deadline</b>.</p>
 
-                <h4 id="resubmissions">Resubmissions and Extensions</h4>
-
-                <p>Under our grading scheme you have the option to resubmit an assignment in order to improve your grade or request a 24-hour extension to submit an assignment late. During the quarter you may exercise these options up to <i>three times, in total</i> (for either resubmissions or 24-hour extensions, with the exception of assignment A5 which may not be submitted late or resubmitted).</p>
-
-                <h5>Resubmissions</h5>
-
-                <p>If you receive a “U” or an "N" on an assignment you may revise and resubmit it. The following apply to resubmissions:</p>
-
-                <ul>
-                  <li>You may only resubmit an assignment if the assignment was originally submitted on time, i.e., by the deadline specified in the assignment.</li>
-                  <li>Revised assignments must be resubmitted <u><i>within three days of receiving the original grade on the grading branch in your GitHub repository&mdash;no exceptions/extensions</i></u>.</li>
-                  <li>You may not resubmit an assignment more than once.</li>
-                </ul>
-
-                <p>If you decide to revise your work and resubmit, please do the following:</p>
-
-                <ul>
-                  <li>Create a branch named <code>&lt;assignment_number&gt;-resubmit</code>, e.g., if re-submitting Assignment 14 you must create branch <code>a14-resubmit</code>.</li>
-                  <li>IMPORTANT: Post a private note on Ed informing us that you have resubmitted. If you don’t notify us via Ed we will not know that there is a resubmission for grading and, if the AWS environment is cleaned up in the interim, your efforts will have been wasted.</li>
-                </ul>
-
-                <p>After reviewing your resubmission we will update the <code>grade.txt</code> file in the grading branch in GitHub.</p>
-
-                <h5>Late Submissions</h5>
-
-                <p>Late submissions will not be considered for grading but you may request a 24-hour extension. If you want to exercise this option, you must <i>notify us before the due date/time</i> by posting a private note in Ed Discussion. Any submission <i>beyond 24 hours after the due date/time</i> will not be graded. Please don’t ask for exceptions.</p>
-
-                <h4 id="reporting">Grade Reporting</h4>
-
-                <p>When your assignment is graded, we will add a “grading” branch to your repository. This branch includes a file called grade.txt that contains your grade and comments/feedback from the grader. You are expected to review the grading branch and, if you have questions/concerns about the accuracy of your grade that you would like us to review, please post a private note on Ed&mdash;please do not email me or the TAs directly.
-
-                <p><b>Make sure that you have GitHub notifications turned on so that you're notified when the grading branch is pushed to your repository. You are responsible for checking the grading branch in a timely manner if your wish to re-submit an assignment (<a href="#resubmissions">see above</a>) or otherwise have your grade reviewed.</b></p>
-
-                <p>The grade in your grading branch is not the final/official grade. Once the TA pushes the grading branch to remote I will review and then publish grades on Canvas (as Canvas is the only officially sanctioned system for communicating grades). There will typically be a few days lag between your grade being pushed to GitHub and my posting it on Canvas. <i>Please do not wait until Canvas grades are posted before resubmitting because it will usually be past the re-submission deadline</i>.</p>
-
                 <h4 id="ext-sources">Using External Sources and AI Systems</h4>
 
                 <p>I fully expect you will use external sources (such as StackOverflow) to research potential solutions and find sample code for your assignments. While you may consult and be guided by such sources, you are expected to write your own code.</p>
@@ -437,7 +403,42 @@
                     <li>Whenever you learn something new from AI that you then apply to your work, you must cite <i>the exact prompt(s) and LLM engine that you used</i>.</li>
                 </ol>
 
-                <p>Any evidence or suggestion that your code was written/generated by someone or something other than you will result in an Unsatisfactory grade, and you may be subject to additional penalties.</p>
+                <p>Any evidence or suggestion that your code was written/generated by someone or something other than you will result in an "Unsatisfactory" grade, and you may be subject to additional penalties.</p>
+
+                <h4 id="resubmissions">Extensions and Resubmissions</h4>
+
+                <p>Under our grading scheme you have the option to request a 24-hour extension to submit an assignment late or to resubmit an assignment in order to improve your grade. During the quarter you may exercise these options up to <i>three times, in total</i> (for either resubmissions or 24-hour extensions, with the exception of assignment A5 which may not be submitted late or resubmitted).</p>
+
+                <h5>Extensions</h5>
+
+                <p>Late submissions will not be considered for grading but you may request a 24-hour extension. If you want to exercise this option, you must <i>notify us before the due date/time</i> by posting a private note in Ed Discussion. Any submission <i>beyond 24 hours after the due date/time</i> will not be graded. Please don’t ask for exceptions.</p>
+
+                <h5>Resubmissions</h5>
+
+                <p>If you receive an “Unsatisfactory” or "Needs Improvement" grade on an assignment you may revise and resubmit it. The following apply to resubmissions:</p>
+
+                <ul>
+                    <li>You may only resubmit an assignment if the assignment was originally submitted on time, i.e., by the deadline specified in the assignment.</li>
+                    <li>Revised assignments must be resubmitted <u><i>within three days of receiving the original grade on the grading branch in your GitHub repository&mdash;no exceptions/extensions</i></u>.</li>
+                    <li>You may not resubmit an assignment more than once.</li>
+                </ul>
+
+                <p>If you decide to revise your work and resubmit, please do the following:</p>
+
+                <ul>
+                    <li>Create a branch named <code>&lt;assignment_number&gt;-resubmit</code>, e.g., if re-submitting Assignment 14 you must create branch <code>a14-resubmit</code>.</li>
+                    <li>IMPORTANT: Post a private note on Ed informing us that you have resubmitted. If you don’t notify us via Ed we will not know that there is a resubmission for grading and, if the AWS environment is cleaned up in the interim, your efforts will have been wasted.</li>
+                </ul>
+
+                <p>After reviewing your resubmission we will update the <code>grade.txt</code> file in the grading branch in GitHub.</p>
+
+                <h4 id="reporting">Grade Reporting</h4>
+
+                <p>When your assignment is graded, we will add a “grading” branch to your repository. This branch includes a file called grade.txt that contains your grade and comments/feedback from the grader. You are expected to review the grading branch and, if you have questions/concerns about the accuracy of your grade that you would like us to review, please post a private note on Ed&mdash;please do not email me or the TAs directly.
+
+                <p><b>Make sure that you have GitHub notifications turned on so that you're notified when the grading branch is pushed to your repository. You are responsible for checking the grading branch in a timely manner if your wish to re-submit an assignment (<a href="#resubmissions">see above</a>) or otherwise have your grade reviewed.</b></p>
+
+                <p>The grade in your grading branch is not the final/official grade. Once the TA pushes the grading branch to remote I will review and then publish grades on Canvas (as Canvas is the only officially sanctioned system for communicating grades). There will typically be a few days lag between your grade being pushed to GitHub and my posting it on Canvas. <i>Please do not wait until Canvas grades are posted before resubmitting because it will usually be past the re-submission deadline</i>.</p>
 
                 <h4 id="github">Using GitHub</h4>
 
@@ -508,8 +509,8 @@ To https://github.com/mpcs-cc/a3-vasv.git
                     <li>Repeat the "<b>add → commit → push</b>" cycle every time you want to update the remote repository.</li>
                 </ol>
 
-                <div class="card bg-warning">
-                    <h4 class="card-header">VERY IMPORTANT NOTE</h4>
+                <div class="card text-white bg-secondary">
+                    <h4 class="card-header">GitHub account for commits</h4>
                     <div class="card-body">
                         <p class="card-text">All commits to your repository <i><u>must be made using the GitHub account that is linked to your CNetID when you first accept an assignment in this class</u></i>. If for some reason you need to change your account during the course of the quarter, you must get approval first. Please do not commit code using any other GitHub account; doing so will result in an automatic “U” for the assignment and potentially an "F" for the class.</p>
                     </div>
